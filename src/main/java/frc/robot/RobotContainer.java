@@ -116,6 +116,6 @@ public class RobotContainer {
    */
   public Command getAutonomousCommand() {
     // An ExampleCommand will run in autonomous
-    return null;
+    return new AutoRoutineCommand(this.driveSubsystem, this.intakeSubsystem, this.shooterSubsystem);
   }
 }
