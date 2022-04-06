@@ -18,6 +18,7 @@ import frc.robot.commands.IntakeForwardCommand;
 import frc.robot.commands.IntakeReverseCommand;
 // import frc.robot.commands.ShooterAnticlockwiseCommand;
 import frc.robot.commands.ShooterClockwiseCommand;
+import frc.robot.commands.autonomous.auto_starts.routine.AutoRoutineCommand;
 import frc.robot.commands.testing.ShooterStoppingCommand;
 // import frc.robot.commands.testing.ShooterTestingCommand;
 import frc.robot.subsystems.DriveSubsystem;

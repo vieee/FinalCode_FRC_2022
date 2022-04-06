@@ -1,4 +1,4 @@
-package frc.robot.commands.autonomous.auto_start.drive;
+package frc.robot.commands.autonomous.auto_starts.drive;
 
 import edu.wpi.first.wpilibj2.command.ParallelRaceGroup;
 import edu.wpi.first.wpilibj2.command.WaitCommand;

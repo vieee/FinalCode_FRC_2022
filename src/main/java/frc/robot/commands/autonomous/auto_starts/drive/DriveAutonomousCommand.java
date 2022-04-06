@@ -1,7 +1,6 @@
-package frc.robot.commands.autonomous.auto_start.drive;
+package frc.robot.commands.autonomous.auto_starts.drive;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
-import frc.robot.Constants.DriveConstants;
 import frc.robot.subsystems.DriveSubsystem;
 
 public class DriveAutonomousCommand extends CommandBase {
@@ -22,13 +21,13 @@ public class DriveAutonomousCommand extends CommandBase {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-      this.driveSubsystem.arcadeDrive(0.2, 0);
+      this.driveSubsystem.arcadeInbuilt(0.2, 0.0);
   }
 
   // Called once the command ends or is interrupted.
   @Override
   public void end(boolean interrupted) {
-    this.driveSubsystem.arcadeDrive(0, 0);
+    this.driveSubsystem.arcadeInbuilt(0.0, 0.0);
   }
 
   // Returns true when the command should end.
