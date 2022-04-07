@@ -51,6 +51,8 @@ public final class Constants {
 
         public static final int kArcadeDriveTurnAxis = 0;
         public static final int kArcadeDriveSpeedAxis = 1;
+        public static final int kIntakeOpeningFwdAxis = 2;
+        public static final int kIntakeOpeningRevAxis = 3;
         // public static final int kClimberOnesAxis = 4;
         // public static final int kClimberTwosAxis = 5;
 
@@ -107,19 +109,35 @@ public final class Constants {
         public static double testingShooterVelocity = 2000;
     }
 
-    /*public static final class ClimberConstants {
-        public static final int ones_ID = 6;
-        public static final int twos_ID = 7;
-        public static final int baseEncoder_startID = 6;
-        public static final int baseEncoder_endID = 7;
-        public static final double twos_movement_threshold = 0.15;
-        public static final double twos_speed_modulator = 0.5;
-        public static final double ones_movement_threshold = 0.1;
-        public static final double ones_speed_modulator = 0.5;
-        // public static final double ones_threshold_stoppage = 0.1
-        public static final double ones_base_speed = 0.55;
-        public static final double ones_threshold_stoppage = 0.1;
-    }*/
+    /*
+     * public static final class ClimberConstants {
+     * public static final int ones_ID = 6;
+     * public static final int twos_ID = 7;
+     * public static final int baseEncoder_startID = 6;
+     * public static final int baseEncoder_endID = 7;
+     * public static final double twos_movement_threshold = 0.15;
+     * public static final double twos_speed_modulator = 0.5;
+     * public static final double ones_movement_threshold = 0.1;
+     * public static final double ones_speed_modulator = 0.5;
+     * // public static final double ones_threshold_stoppage = 0.1
+     * public static final double ones_base_speed = 0.55;
+     * public static final double ones_threshold_stoppage = 0.1;
+     * }
+     */
+
+    public static final class FeederConstants {
+        public static final int feeder_ID = 1;
+        public static final double deadband = 0.1;
+        public static final double flowSpeed = 0.4;
+        public static final double stopSpeed = 0.0;
+    }
+
+    public static final class IntakeOpeningConstants {
+        public static final int intakeOpening_ID = 2;
+        public static final double deadband = 0.1;
+        public static final double flowSpeed = 0.4;
+        public static final double stopSpeed = 0.0;
+    }
 
     public static final DigitalSource left_encoder_port = null;
     public static final DigitalSource second_encoder_port = null;
