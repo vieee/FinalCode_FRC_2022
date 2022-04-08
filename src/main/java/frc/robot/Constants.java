@@ -56,7 +56,7 @@ public final class Constants {
         // public static final int kClimberOnesAxis = 4;
         // public static final int kClimberTwosAxis = 5;
 
-        public static final int intakerDOwn_A_ButtonNumber = 1;
+        public static final int intakerDown_A_ButtonNumber = 1;
         public static final int shootStopping_B_ButtonNumber = 2;
         public static final int feeder_X_ButtonNumber = 3;
         public static final int intaker_Y_ButtonNumber = 4;
@@ -97,6 +97,7 @@ public final class Constants {
         public static final int poser_BID = 0;
         public static final double deadband = 0.15;
         public static final double flowSpeed = -0.35;
+        public static final double reverseFlowSpeed = 0.35;
         public static final double stopSpeed = 0;
         // public static final int feeder_ID = 29;
         // public static final double feederSpeed = -0.4;

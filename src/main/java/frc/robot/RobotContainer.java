@@ -21,6 +21,7 @@ import frc.robot.commands.autonomous.auto_starts.routine.AutoRoutineCommand;
 import frc.robot.commands.teleop.feeder.FeederMovesCommand;
 import frc.robot.commands.teleop.feeder.FeederStopsCommand;
 import frc.robot.commands.teleop.intakeOpening.IntakeOpeningCommand;
+import frc.robot.commands.teleop.reverseintake.PurposefulReverseIntakeCommand;
 import frc.robot.commands.testing.ShooterStoppingCommand;
 // import frc.robot.commands.testing.ShooterTestingCommand;
 import frc.robot.subsystems.DriveSubsystem;
@@ -108,6 +109,10 @@ public class RobotContainer {
     // Intake Position Switch
     new JoystickButton(joyD, OIConstants.intaker_Y_ButtonNumber)
         .toggleWhenPressed(new IntakeReverseCommand(this.intakeSubsystem));
+
+    // Intake Purposeful Reverse - Works when pressed
+    new JoystickButton(joyD, OIConstants.intakerDown_A_ButtonNumber)
+        .whenPressed(new PurposefulReverseIntakeCommand(this.intakeSubsystem));
 
   }
 
