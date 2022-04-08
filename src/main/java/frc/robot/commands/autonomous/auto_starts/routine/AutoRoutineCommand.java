@@ -19,9 +19,9 @@ public class AutoRoutineCommand extends SequentialCommandGroup {
     // addCommands(new FooCommand(), new BarCommand());
     addCommands(new ServoStartGroupCommand(intakeOpeningSubsystem, 1));
 
-    addCommands(new ShooterRoutineGroupCommand(shooterSubsystem, 4));
+    addCommands(new ShooterRoutineGroupCommand(shooterSubsystem, 5));
 
-    addCommands(new DriveRoutineCommand(driveSubsystem, 4));
+    addCommands(new DriveRoutineCommand(driveSubsystem, 6));
 
 
 
