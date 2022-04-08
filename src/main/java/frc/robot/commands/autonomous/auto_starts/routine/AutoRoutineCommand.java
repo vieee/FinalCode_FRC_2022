@@ -6,6 +6,7 @@ import frc.robot.commands.autonomous.auto_starts.drive.DriveRoutineCommand;
 import frc.robot.commands.autonomous.auto_starts.shooter.ShooterRoutineGroupCommand;
 import frc.robot.commands.autonomous.auto_starts.start.ServoStartGroupCommand;
 import frc.robot.subsystems.DriveSubsystem;
+import frc.robot.subsystems.FeederSubsystem;
 import frc.robot.subsystems.IntakeOpeningSubsystem;
 import frc.robot.subsystems.ShooterSubsystem;
 
@@ -14,16 +15,15 @@ import frc.robot.subsystems.ShooterSubsystem;
 // https://docs.wpilib.org/en/stable/docs/software/commandbased/convenience-features.html
 public class AutoRoutineCommand extends SequentialCommandGroup {
   /** Creates a new AutoRoutineCommand. */
-  public AutoRoutineCommand(IntakeOpeningSubsystem intakeOpeningSubsystem, DriveSubsystem driveSubsystem, ShooterSubsystem shooterSubsystem) {
+  public AutoRoutineCommand(IntakeOpeningSubsystem intakeOpeningSubsystem, DriveSubsystem driveSubsystem,
+      ShooterSubsystem shooterSubsystem, FeederSubsystem feederSubsystem) {
     // Add your commands in the addCommands() call, e.g.
     // addCommands(new FooCommand(), new BarCommand());
     addCommands(new ServoStartGroupCommand(intakeOpeningSubsystem, 1));
 
-    addCommands(new ShooterRoutineGroupCommand(shooterSubsystem, 5));
+    addCommands(new ShooterRoutineGroupCommand(shooterSubsystem, feederSubsystem, 5, 2));
 
     addCommands(new DriveRoutineCommand(driveSubsystem, 6));
-
-
 
   }
 }
