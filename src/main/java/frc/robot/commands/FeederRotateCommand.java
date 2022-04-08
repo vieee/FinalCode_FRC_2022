@@ -8,7 +8,6 @@ import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.RobotContainer;
 import frc.robot.Constants.OIConstants;
 import frc.robot.subsystems.FeederSubsystem;
-import frc.robot.Constants.FeederConstants;
 
 public class FeederRotateCommand extends CommandBase {
   private final FeederSubsystem feederSubsystem;
