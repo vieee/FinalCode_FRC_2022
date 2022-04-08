@@ -7,15 +7,16 @@ package frc.robot.commands;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.RobotContainer;
 import frc.robot.Constants.OIConstants;
-import frc.robot.subsystems.IntakeSubsystem;
+import frc.robot.subsystems.FeederSubsystem;
+import frc.robot.Constants.FeederConstants;
 
 public class FeederRotateCommand extends CommandBase {
-  private final IntakeSubsystem intakeSubsystem;
+  private final FeederSubsystem feederSubsystem;
   /** Creates a new FeederRotateCommand. */
-  public FeederRotateCommand(IntakeSubsystem intakeSubsystem) {
-    this.intakeSubsystem = intakeSubsystem;
+  public FeederRotateCommand(FeederSubsystem feederSubsystem) {
+    this.feederSubsystem = feederSubsystem;
     // Use addRequirements() here to declare subsystem dependencies.
-    addRequirements(this.intakeSubsystem);
+    addRequirements(this.feederSubsystem);
   }
 
   // Called when the command is initially scheduled.
@@ -30,6 +31,7 @@ public class FeederRotateCommand extends CommandBase {
   @Override
   public void end(boolean interrupted) {
     // this.intakeSubsystem.setFeederSpeed();
+    this.feederSubsystem.setFeederSpeed(0.4);
   }
 
   // Returns true when the command should end.
