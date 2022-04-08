@@ -137,6 +137,7 @@ public final class Constants {
         public static final double deadband = 0.1;
         public static final double flowSpeed = 0.4;
         public static final double stopSpeed = 0.0;
+        public static final int initialOpening_ID = 1;
     }
 
     public static final DigitalSource left_encoder_port = null;
