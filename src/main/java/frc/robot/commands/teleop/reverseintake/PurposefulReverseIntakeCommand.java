@@ -6,18 +6,22 @@ package frc.robot.commands.teleop.reverseintake;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.RobotContainer;
+import frc.robot.Constants.FeederConstants;
 import frc.robot.Constants.IntakeConstants;
 import frc.robot.Constants.OIConstants;
+import frc.robot.subsystems.FeederSubsystem;
 import frc.robot.subsystems.IntakeSubsystem;
 
 public class PurposefulReverseIntakeCommand extends CommandBase {
   private IntakeSubsystem intakeSubsystem;
+  private FeederSubsystem feederSubsystem;
 
   /** Creates a new PurposefulReverseIntakeCommand. */
-  public PurposefulReverseIntakeCommand(IntakeSubsystem intakeSubsystem) {
+  public PurposefulReverseIntakeCommand(IntakeSubsystem intakeSubsystem, FeederSubsystem feederSubsystem) {
     this.intakeSubsystem = intakeSubsystem;
+    this.feederSubsystem = feederSubsystem;
     // Use addRequirements() here to declare subsystem dependencies.
-    addRequirements(this.intakeSubsystem);
+    addRequirements(this.intakeSubsystem, this.feederSubsystem);
   }
 
   // Called when the command is initially scheduled.
@@ -29,12 +33,14 @@ public class PurposefulReverseIntakeCommand extends CommandBase {
   @Override
   public void execute() {
     this.intakeSubsystem.setIntakeSpeed(IntakeConstants.reverseFlowSpeed);
+    this.feederSubsystem.setFeederSpeed(FeederConstants.reverseFlowSpeed);
   }
 
   // Called once the command ends or is interrupted.
   @Override
   public void end(boolean interrupted) {
     this.intakeSubsystem.setIntakeSpeed(IntakeConstants.stopSpeed);
+    this.feederSubsystem.setFeederSpeed(FeederConstants.stopSpeed);
   }
 
   // Returns true when the command should end.

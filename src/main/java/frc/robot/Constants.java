@@ -130,6 +130,7 @@ public final class Constants {
         public static final int feeder_ID = 1;
         public static final double deadband = 0.1;
         public static final double flowSpeed = 0.4;
+        public static final double reverseFlowSpeed = -0.4;
         public static final double stopSpeed = 0.0;
     }
 

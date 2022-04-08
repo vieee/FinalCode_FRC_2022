@@ -112,7 +112,7 @@ public class RobotContainer {
 
     // Intake Purposeful Reverse - Works when pressed
     new JoystickButton(joyD, OIConstants.intakerDown_A_ButtonNumber)
-        .whenPressed(new PurposefulReverseIntakeCommand(this.intakeSubsystem));
+        .whenPressed(new PurposefulReverseIntakeCommand(this.intakeSubsystem, this.feederSubsystem));
 
   }
 
