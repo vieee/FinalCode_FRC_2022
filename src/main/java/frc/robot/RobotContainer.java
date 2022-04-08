@@ -103,7 +103,7 @@ public class RobotContainer {
 
     // Feeder Switch Position
     new JoystickButton(joyD, OIConstants.feeder_X_ButtonNumber)
-        .whenActive(new FeederStopsCommand(this.feederSubsystem));
+        .toggleWhenActive(new FeederStopsCommand(this.feederSubsystem));
 
     // Intake Position Switch
     new JoystickButton(joyD, OIConstants.intaker_Y_ButtonNumber)
