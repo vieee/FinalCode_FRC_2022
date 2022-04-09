@@ -4,8 +4,6 @@
 
 package frc.robot.commands.autonomous.auto_starts.shooter;
 
-import edu.wpi.first.wpilibj.Timer;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.ParallelRaceGroup;
 import edu.wpi.first.wpilibj2.command.WaitCommand;
 import frc.robot.commands.autonomous.auto_starts.feeder.FeederRoutineGroupCommand;
@@ -20,12 +18,10 @@ public class ShooterRoutineGroupCommand extends ParallelRaceGroup {
   public ShooterRoutineGroupCommand(ShooterSubsystem shooterSubsystem, FeederSubsystem feederSubsystem, double time, double feederTimeDelay) {
     // Add your commands in the addCommands() call, e.g.
     // addCommands(new FooCommand(), new BarCommand());
-    double now = Timer.getFPGATimestamp();
     addCommands(new ShooterAutonomousCommand(shooterSubsystem));
 
     addCommands(new FeederRoutineGroupCommand(feederSubsystem, feederTimeDelay));
-    // System.out.println("UP");
-    SmartDashboard.putNumber("Time", now);
+ 
     addCommands(new WaitCommand(time));
   }
 }
