@@ -17,7 +17,7 @@ import frc.robot.commands.IntakeForwardCommand;
 import frc.robot.commands.IntakeReverseCommand;
 // import frc.robot.commands.ShooterAnticlockwiseCommand;
 import frc.robot.commands.ShooterClockwiseCommand;
-import frc.robot.commands.autonomous.auto_starts.routine.AutoRoutineCommand;
+import frc.robot.commands.autonomous.auto_starts.routine.AutoRoutineCompleteGroupCommand;
 import frc.robot.commands.teleop.feeder.FeederMovesCommand;
 import frc.robot.commands.teleop.feeder.FeederStopsCommand;
 import frc.robot.commands.teleop.intakeOpening.IntakeOpeningCommand;
@@ -123,6 +123,6 @@ public class RobotContainer {
    */
   public Command getAutonomousCommand() {
     // An ExampleCommand will run in autonomous
-    return new AutoRoutineCommand(this.intakeOpeningSubsystem, this.driveSubsystem, this.shooterSubsystem, feederSubsystem);
+    return new AutoRoutineCompleteGroupCommand(this.intakeOpeningSubsystem, this.driveSubsystem, this.shooterSubsystem, feederSubsystem);
   }
 }
