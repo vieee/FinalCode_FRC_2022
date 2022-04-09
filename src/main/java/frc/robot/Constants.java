@@ -21,7 +21,7 @@ import edu.wpi.first.wpilibj.DigitalSource;
 public final class Constants {
     public static final class DrivingConstants {
 
-        public static final double maxSpeed = 0.7;
+        public static final double maxSpeed = 0.8;
         public static final double maxTurnSpeed = 0.5;
         public static final int FR_ID = 44;
         public static final int BR_ID = 33;
@@ -139,7 +139,7 @@ public final class Constants {
         public static final double deadband = 0.1;
         public static final double flowSpeed = 0.4;
         public static final double stopSpeed = 0.0;
-        public static final int initialOpening_ID = 1;
+        public static final int initialOpening_ID = 0;
     }
 
     public static final DigitalSource left_encoder_port = null;

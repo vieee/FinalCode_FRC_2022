@@ -27,7 +27,7 @@ public class DriveAutonomousCommand extends CommandBase {
   // Called once the command ends or is interrupted.
   @Override
   public void end(boolean interrupted) {
-    this.driveSubsystem.arcadeInbuilt(0.0, 0.0);
+    this.driveSubsystem.drive(0.0, 0.0);
   }
 
   // Returns true when the command should end.
